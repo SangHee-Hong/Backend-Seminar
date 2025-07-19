@@ -12,6 +12,8 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    // 스프링 컨텍스트 의존성 추가
+    implementation 'org.springframework:spring-context:6.1.6'
 }
 
 test {

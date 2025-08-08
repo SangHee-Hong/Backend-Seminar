@@ -1,5 +1,6 @@
 package com.example.seminar.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,6 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class PostDto {
     private int id;
     private String title;
@@ -14,13 +16,6 @@ public class PostDto {
     private String writer;
     private int boardId;
 
-    public PostDto(int id, String title, String content, String writer, int boardId){
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.writer = writer;
-        this.boardId = boardId;
-    }
     @Override
     public String toString() {
         return "PostDto{"+"title="+title+'\''+

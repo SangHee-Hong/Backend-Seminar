@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Repository
 public class PostDao {
-    private static final Logger logger = LoggerFactory.getLogger(PostDto.class);
+    private static final Logger logger = LoggerFactory.getLogger(PostDao.class);
     private final PostRepository postRepository;
 
     public PostDao(@Autowired PostRepository postRepository) {

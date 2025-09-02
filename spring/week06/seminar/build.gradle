@@ -60,11 +60,6 @@ tasks.withType(JavaCompile) {
     options.getGeneratedSourceOutputDirectory().set(file(generated))
 }
 
-// Java srcSet에 QClass 디렉토리를 포함하도록 설정
-sourceSets {
-    main.java.srcDirs += [ generated ]
-}
-
 // Gradle clean 실행 시 QClass 디렉토리 삭제
 clean {
     delete file(generated)

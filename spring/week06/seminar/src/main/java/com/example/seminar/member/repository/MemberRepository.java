@@ -10,6 +10,7 @@ import java.util.List;
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
     // JPA
+    Member findByUsername(String username);
     List<Member> findByUsernameAndAgeGreaterThanEqual(String username, int age);
 
     // JPQL

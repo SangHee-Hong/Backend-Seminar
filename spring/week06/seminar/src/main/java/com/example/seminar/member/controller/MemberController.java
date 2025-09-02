@@ -24,9 +24,14 @@ public class MemberController {
         return memberService.findMemberAll();
     }
 
-    @GetMapping("/members/jpa")
-    public List<Member> jpa(@RequestParam String username, @RequestParam int age) {
-        return memberService.findByJPA(username, age);
+    @GetMapping("/members/jpa/one")
+    public Member jpaFindByUsername(@RequestParam String username) {
+        return memberService.findByJpaOne(username);
+    }
+
+    @GetMapping("/members/jpa/all")
+    public List<Member> jpaFindMembers(@RequestParam String username, @RequestParam int age) {
+        return memberService.findByJpaAll(username, age);
     }
 
     @GetMapping("/members/jpql")

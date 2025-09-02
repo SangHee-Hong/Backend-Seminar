@@ -20,10 +20,16 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
-    public List<Member> findByJPA(String username, int age) {
+    // JPA
+    public Member findByJpaOne(String username) {
+        return memberRepository.findByUsername(username);
+    }
+
+    public List<Member> findByJpaAll(String username, int age) {
         return memberRepository.findByUsernameAndAgeGreaterThanEqual(username, age);
     }
 
+    // JPQL
     public List<Member> findByJPQL(String username, int age) {
         return memberRepository.findMembersByUsernameAndMinAge(username, age);
     }
